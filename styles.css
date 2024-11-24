@@ -875,9 +875,11 @@ footer {
   header .right-header {
     padding: 2rem !important;
   }
-  .one .text{
-    font-size: .4rem;
-    padding: 1.5rem;
+  .one h1{
+    font-size: 2.3rem;
+  }
+  .one .description{
+    font-size: 1.4rem;
   }
   .color-btn {
     width: 50px;
