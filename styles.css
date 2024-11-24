@@ -96,16 +96,17 @@
   height: 40px;
   background-color: var(--color-text);
   border-radius: 50%;
+  font-size: 25px;
+  color: var(--color-background);
   cursor: pointer;
-  background-image: url('images/light_mode_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png');
-  background-size: contain; 
+ background-size: contain; 
   background-repeat: no-repeat;
   background-position: center;
   padding: 10px;
   transition: all .5s ease-in-out;
-  }
-  .darkbtn{
-    background-image: url('images/dark_mode_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
   .section {
     font-family: 'Poppins', sans-serif !important;
@@ -399,7 +400,7 @@
   width: 75%;
 }
 .about-stats .progress-bars .progress-bar .progress .python {
-  width: 35%;
+  width: 55%;
 }
 
 .stat-title {
@@ -412,7 +413,31 @@
 }
 
 /*Timeline*/
-.timeline {
+.timeline-btn-wrap{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.timeline-btn-wrap button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: var(--color-background);
+  border: 2px solid var(--color-text);
+  color: var(--color-text);
+  font-weight: 600;
+  box-shadow: var(--box-shadow-1);
+}
+.timeline-btn-wrap .active {
+  background-color: var(--color-text);
+  color: var(--color-background);
+}
+
+.timeline-btn-wrap button:not(.active) {
+  background-color: var(--color-background);
+}.timeline {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
@@ -422,6 +447,7 @@
   position: relative;
   padding-left: 3rem;
   border-left: 0.5px solid var(--color-background-2);
+  transition: all 2s ease-in-out;
 }
 .timeline .timeline-item .tl-icon {
   position: absolute;
@@ -447,6 +473,7 @@
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: 500;
+  color: var(--color-background);
 }
 .timeline .timeline-item h5 {
   padding: 1rem 0;
@@ -455,15 +482,16 @@
   font-weight: 600;
   color: var(--color-text);
 }
+
+
 .timeline .timeline-item h5 span {
-  color: var(-color-background-2);
+  color: var(--color-accent);
   font-weight: 500;
   font-size: 1.2rem;
 }
 .timeline .timeline-item p {
-  color: var(-color-background-2);
+  color: var(--color-text);
 }
-
 /*Contact section*/
 .contact-content-con {
   display: flex;
@@ -596,9 +624,15 @@ gap: 1rem;
   max-width: 30rem;
   margin-bottom: 1.5rem;
 }
+
 .portfolio-item .title{
   text-transform: uppercase;
   text-align: center;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+.portfolio-item .descri{
+  padding: 3px 1rem;
   font-weight: 600;
 }
 .portfolio-item img{
@@ -728,7 +762,9 @@ footer {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
-
+.footerwrap a {
+  color: var(--color-text);
+}
 .fMenuTitle {
   font-size: 16px;
 }
@@ -807,9 +843,12 @@ footer {
 .header{
   padding: 5px 30px;
 }
-.portfolios{
-  grid-template-columns: 1fr;
-        padding-bottom: 6rem;
+.portfolios{display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
   }
   .main-title h2{
     font-size: 2.3rem;
@@ -828,7 +867,7 @@ footer {
 }
 
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .header {
     padding: 10px;
   }
@@ -840,9 +879,12 @@ footer {
     width: 50px;
     height: 50px;
   }
+  .about-container{
+    width: 100%;
+
+  }
   .about-container .right-about .about-item {
-    
-    width: 500px;
+    width: 100%;
   }
   .header-content {
     grid-template-columns: 1fr;
@@ -909,7 +951,7 @@ footer {
     margin-left: 0;
 }
   .section {
-    padding: 2rem 2.5rem !important;
+    padding: 1rem 1.5rem !important;
   }
   .controls {
     top: auto;
@@ -924,18 +966,26 @@ footer {
   .controls .control {
     margin: 1rem;
   }
+  
 }
 @media (max-width: 370px) {
   .btns-container{
     flex-direction: column;
   }
-  .about-container .right-about .about-item {
-    padding: 0;
-    font-size: 1rem;
-    width: 300px;
-  }
+  
   .header{
     padding: 5px;
   }
+  
+  
+  .about-container .right-about .about-item .about-text .large-text {
+    font-size: 1.5rem;
+  }
+  .about-container .right-about .about-item .about-text .small-text {
+    font-size: 1rem;
+  }
+  .contact-content-con .left-contact .contact-info .contact-item p{
+    font-size: 1rem;
+}
 }
   
