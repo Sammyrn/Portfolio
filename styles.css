@@ -378,6 +378,7 @@
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
 }
+
 .about-stats .progress-bars .progress-bar .progress .html {
   width: 95%;
 }
@@ -387,20 +388,23 @@
 .about-stats .progress-bars .progress-bar .progress .javascript {
   width: 83%;
 }
-.about-stats .progress-bars .progress-bar .progress .bootstrap {
-  width: 70%;
+.about-stats .progress-bars .progress-bar .progress .react {
+  width: 80%;
 }
-.about-stats .progress-bars .progress-bar .progress .sass {
-  width: 85%;
+.about-stats .progress-bars .progress-bar .progress .reactnative {
+  width: 75%;
 }
-.about-stats .progress-bars .progress-bar .progress .php {
+.about-stats .progress-bars .progress-bar .progress .node {
   width: 60%;
 }
 .about-stats .progress-bars .progress-bar .progress .mysql {
   width: 75%;
 }
 .about-stats .progress-bars .progress-bar .progress .python {
-  width: 55%;
+  width: 65%;
+}
+.about-stats .progress-bars .progress-bar .progress .express {
+  width: 81%;
 }
 
 .stat-title {
