@@ -331,6 +331,10 @@
   padding: 1rem;
   color: var(--color-text);
 }
+.about-container .left-about p span {
+    color: var(--color-accent);
+    font-weight: 700;
+}
 .about-container .left-about h4 {
   font-size: 1.5rem;
   text-transform: uppercase;
